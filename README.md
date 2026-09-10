@@ -8,6 +8,7 @@ OrbitGuard is a small educational MVP that demonstrates how a space-debris monit
 - Relative-motion analysis to estimate time to closest approach (TCA).
 - A simple risk score based on distance, altitude difference, and relative speed.
 - A visual orbital map and a prioritized close-approach queue.
+- A synthetic proximity hazard zone around the highest-priority encounter.
 - A table that makes every tracked object and its calculated state inspectable.
 
 ## Run it
@@ -22,7 +23,7 @@ Then visit `http://localhost:8000`.
 
 ## Important scope note
 
-This is a synthetic-data research demonstrator, not a flight-safety system. The calculation uses a simplified relative-motion model. A production system would need authoritative ephemerides, uncertainty/covariance data, an orbital propagator, validated probability-of-collision methods, and human/mission approval before any maneuver recommendation.
+This is a synthetic-data research demonstrator, not a flight-safety system. The calculation uses a simplified relative-motion model, and the map's hazard zone is an illustrative orbital proximity zone—not a geographic ground-impact prediction. A production system would need authoritative ephemerides, uncertainty/covariance data, an orbital propagator, validated probability-of-collision methods, and human/mission approval before any maneuver recommendation.
 
 ## Suggested faculty explanation
 

@@ -58,7 +58,8 @@ function render(model) {
   }).join("");
 
   const map = document.querySelector("#orbitMap");
-  map.innerHTML = `<div class="earth"></div>` + model.objects.map((object) => `<span class="object-dot ${object.type}" style="left:${object.x}%;top:${object.y}%" data-label="${object.name}" title="${object.name} · ${object.altitude} km"></span>`).join("");
+  const highestRisk = model.encounters[0].object;
+  map.innerHTML = `<div class="earth"></div><span class="impact-zone" style="left:${highestRisk.x}%;top:${highestRisk.y}%" title="Synthetic proximity hazard zone"></span>` + model.objects.map((object) => `<span class="object-dot ${object.type}" style="left:${object.x}%;top:${object.y}%" data-label="${object.name}" title="${object.name} · ${object.altitude} km"></span>`).join("");
 }
 
 render(buildModel());
