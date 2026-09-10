@@ -28,6 +28,6 @@ Streamlit will open the dashboard in a browser.
 
 This is a synthetic-data research demonstrator, not a flight-safety system. The calculation uses a simplified relative-motion model, and the map's hazard zone is an illustrative orbital proximity zone—not a geographic ground-impact prediction. A production system would need authoritative ephemerides, uncertainty/covariance data, an orbital propagator, validated probability-of-collision methods, and human/mission approval before any maneuver recommendation.
 
-## Suggested faculty explanation
+## Faculty report
 
-“OrbitGuard is an early-stage decision-support prototype. I created a controlled synthetic dataset so the workflow can be demonstrated without claiming access to live spacecraft telemetry. The prototype converts relative position and velocity into an estimated closest approach, ranks events by a transparent risk score, and shows the result in a dashboard. The next research step would be replacing the synthetic model with validated TLE/ephemeris data and uncertainty-aware collision probability.”
+The faculty-facing explanation, technology choices, methodology, limitations, and viva prompts are available in [`docs/OrbitGuard_Faculty_Report.pdf`](docs/OrbitGuard_Faculty_Report.pdf).
