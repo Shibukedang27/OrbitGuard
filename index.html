@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrbitGuard | Space Debris Risk Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">ORBITGUARD / MVP 01</p>
+          <h1>Space debris risk, made visible.</h1>
+          <p class="subhead">
+            A synthetic-data demonstrator for tracking orbital objects, estimating
+            closest approach, and prioritizing collision alerts.
+          </p>
+        </div>
+        <div class="status-pill"><span></span> Simulation online</div>
+      </header>
+
+      <section class="notice">
+        <strong>Research prototype:</strong> all objects and calculations are
+        synthetic. This dashboard is for education and visualization, not flight
+        operations or maneuver decisions.
+      </section>
+
+      <section class="metrics" id="metrics"></section>
+
+      <section class="workspace">
+        <div class="panel orbit-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">ORBITAL VIEW</p>
+              <h2>Relative position map</h2>
+            </div>
+            <div class="legend"><span class="dot satellite"></span>Satellite <span class="dot debris"></span>Debris</div>
+          </div>
+          <div class="orbit-map" id="orbitMap" aria-label="Synthetic orbital map"></div>
+        </div>
+
+        <div class="panel alerts-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">PRIORITY QUEUE</p>
+              <h2>Close-approach alerts</h2>
+            </div>
+            <span class="count" id="alertCount"></span>
+          </div>
+          <div class="alerts" id="alerts"></div>
+        </div>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">TRACKED OBJECTS</p>
+            <h2>Simulation catalog</h2>
+          </div>
+          <button class="refresh" id="refreshButton">Re-run simulation ↻</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Object</th><th>Type</th><th>Altitude</th><th>Relative speed</th><th>Risk</th><th>Time to closest approach</th></tr></thead>
+            <tbody id="objectTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <span>OrbitGuard is a student research MVP.</span>
+        <span>Method: synthetic relative-motion model + distance thresholds.</span>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
