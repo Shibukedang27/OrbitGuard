@@ -13,13 +13,16 @@ OrbitGuard is a small educational MVP that demonstrates how a space-debris monit
 
 ## Run it
 
-No build step or package installation is required. Open `index.html` in a browser, or serve the folder with any static web server:
+This version is Python-based and uses Streamlit:
 
 ```bash
-python3 -m http.server 8000
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-Then visit `http://localhost:8000`.
+Streamlit will open the dashboard in a browser.
 
 ## Important scope note
 
